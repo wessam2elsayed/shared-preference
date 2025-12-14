@@ -22,7 +22,7 @@ class SharedPref {
   static Future getInt(String key) async{
     final SharedPreferences sharedPreferences=
     await SharedPreferences.getInstance();
-    return sharedPreferences.getString(key);
+    return sharedPreferences.getInt(key);
   }
 
   static Future removeData(String key) async{
@@ -30,4 +30,7 @@ class SharedPref {
     await SharedPreferences.getInstance();
     return sharedPreferences.remove(key);
   }
+
+  
+
 }
